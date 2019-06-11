@@ -58,4 +58,4 @@ def decrypt_token(token, key, ttl):
     if ttl != 0 and time.time_ns() - timestamp > ttl:
         raise Exception("Expired Token")
 
-    return plaintext
+    return plaintext.decode("utf-8")
